@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&display=swap');
+
+.footer {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  padding: 100px 60px 40px;
+  font-family: Karla, sans-serif;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  background: linear-gradient(to bottom, #000000, #f6ad01 100%);
+  opacity: 0.3;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.footer .circle1,
+.footer .circle2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+.footer .circle1 {
+  top: 20px;
+  right: 90px;
+  background-image: url('/images/circle1.png');
+}
+
+.footer .circle2 {
+  top: 50px;
+  right: 50px;
+  background-image: url('/images/circle2.png');
+}
+
+.footer-watermark {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30vh;
+  font-weight: 900;
+  color: #fff;
+  opacity: 0.05;
+  white-space: nowrap;
+  z-index: 0;
+  letter-spacing: 1vw;
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Main Content */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.footer-logo {
+  width: 130px;
+  margin-bottom: 12px;
+}
+
+.footer-column h2 {
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+
+.footer-column h3 {
+  margin-top: 60px;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.footer-column p,
+.footer-column li {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.7;
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+/* Social Icons */
+.footer-social-icons {
+  margin-top: 14px;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social-icons a {
+  color: white;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+.footer-social-icons a:hover {
+  color: #f6ad01;
+}
+
+/* Newsletter */
+.newsletter-input {
+  display: flex;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+.newsletter-input input {
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  flex: 1;
+  background-color: #fff;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.newsletter-input button {
+  background-color: #f6ad01;
+  border: none;
+  padding: 0 14px;
+  border-radius: 0 4px 4px 0;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Appointment */
+.appointment-button {
+  margin-top: 49px;
+  border: 1px solid #f6ad01;
+  background: transparent;
+  color: #f6ad01;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.appointment-button:hover {
+  background-color: #f6ad01;
+  color: #000;
+}
+
+/* Bottom Strip */
+.footer-bottom {
+  margin-top: 60px;
+  border-top: 3px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* padding: 40px 80px; */
+  color: #aaa;
+  position: relative;
+  z-index: 3;
+}
+
+/* ──────────── Responsive ──────────── */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 40px 30px;
+  }
+
+  .footer-watermark {
+    font-size: 150px;
+    top: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 30px 30px;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+  }
+
+  .footer-content {
+    gap: 40px;
+  }
+
+  .newsletter-input {
+    flex-direction: column;
+  }
+
+  .newsletter-input input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-input button {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .appointment-button {
+    width: 100%;
+  }
+
+  .footer-watermark {
+    font-size: 80px;
+    top: 40%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-column h2,
+  .footer-column h3 {
+    font-size: 16px;
+  }
+
+  .footer-column p,
+  .footer-column li {
+    font-size: 13px;
+  }
+
+  .footer-watermark {
+    font-size: 60px;
+    top: 8%;
+  }
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&display=swap');
+
+.about-us {
+  position: relative;
+  width: 100%;
+  background: #E2E2E2 url('/images/Vector 2.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.about-circle {
+  position: absolute;
+  z-index: 0;
+  opacity: 1;
+  width: 240px;
+  height: auto;
+}
+
+.about-circle.left {
+  left: -80px;
+  top: 30%;
+}
+
+.about-circle.right {
+  width: 150px;
+  height: auto;
+  right: -10px;
+  bottom: 40%;
+  transform: rotate(175deg);
+}
+
+.about-us .content {
+  max-width: 850px;
+  color: #4A4A4B;
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.about-us .content h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: black;
+}
+
+.about-us .content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .about-us {
+    padding: 140px 40px;
+  }
+
+  .about-us .content h2 {
+    font-size: 25px;
+  }
+
+  .about-us .content p {
+    font-size: 10px;
+  }
+
+  .about-circle {
+    width: 180px;
+  }
+
+  .about-circle.left {
+    left: -80px;
+  }
+
+  .about-circle.right {
+    right: -80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    padding: 160px 26px;
+    background-position: center top;
+  }
+
+  .about-us .content h2 {
+    font-size: 22px;
+  }
+
+  .about-us .content p {
+    font-size: 10px;
+    max-width: 400px;
+  }
+
+  .about-circle {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us {
+    padding: 180px 16px;
+/*     max-width: 300px; */
+  }
+
+  .about-us .content h2 {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .about-us .content p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .about-circle {
+    width: 120px;
+  }
+
+  .about-circle.left {
+    left: -70px;
+    top: 20%;
+  }
+
+  .about-circle.right {
+    right: -70px;
+    bottom: 20%;
+  }
+}

@@ -1,0 +1,108 @@
+.hero-gradient {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  width: 100%;
+  margin-top: 0;
+  position: relative;
+}
+
+.tech-section {
+  position: relative;
+  background-color: black;
+  color: white;
+  padding: 4rem 1.5rem;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1440px;
+}
+
+/* Background Overlay Image */
+.tech-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url('/your-grid-bg.png'); /* Replace with your image path */
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Optional Particles */
+.tech-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Content */
+.tech-content-wrapper {
+  position: relative;
+  z-index: 20;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .tech-content-wrapper {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.tech-left {
+  text-align: left;
+  max-width: 500px; 
+  margin-left: 60px;
+}
+
+.tech-subtitle {
+  color: #ff6b00;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.tech-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .tech-title {
+    font-size: 3rem;
+  }
+}
+
+.highlight {
+  color: #ff6b00;
+}
+
+.tech-right {
+  text-align: right;
+}
+
+.tech-description {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.tech-button {
+  display: inline-block;
+  background-color: #ff6b00;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.tech-button:hover {
+  background-color: #e55a00;
+}
