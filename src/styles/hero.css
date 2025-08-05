@@ -317,6 +317,11 @@
     animation: fadeInRight 00.8s ease forwards;
   }
 
+  .hero-icons a {
+    width: 20px;
+    height: 20px;
+  }
+
   .hero-shapes .round-left {
     width: 80px;
     top: 82%;
@@ -553,6 +558,7 @@
     transform: translateY(5px);
   }
 } */
+
 
 
 
