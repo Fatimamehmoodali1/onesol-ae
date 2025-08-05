@@ -1,119 +1,3 @@
-/* .services-section {
-  /* position: relative;
-  min-height: 100vh;
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, #000, #111);
-  background-image: url(/images/line-vector.svg);
-  background-size: contain;
-  background-repeat: repeat-x;
-  overflow: hidden;
-}
-
-.section-title {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-}
-
-.primary-orange {
-  color: #f58f20;
-}
-
-.section-subtitle {
-  text-align: center;
-  font-size: 1.25rem;
-  color: #aaa;
-  max-width: 640px;
-  margin: 0 auto 3rem;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.service-card {
-  border-radius: 1.5rem;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  transition: border 0.5s ease;
-  border-width: 1px;
-  cursor: pointer;
-  position: relative;
-}
-
-.service-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease;
-  background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
-}
-
-.service-card:hover .service-icon {
-  transform: rotate(12deg);
-}
-
-.icon-svg {
-  width: 32px;
-  height: 32px;
-  color: white;
-}
-
-.service-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-.service-desc {
-  color: #aaa;
-  margin-bottom: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.service-list {
-  font-size: 0.875rem;
-  opacity: 0;
-  transform: translateY(1rem);
-  transition: all 0.5s ease;
-  list-style: none;
-  padding-left: 0;
-}
-
-.service-card:hover .service-list {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.service-list li {
-  margin-bottom: 0.5rem;
-}   */
-
-
 .what-we-craft {
   position: relative;
   padding: 6rem 1.5rem;
@@ -260,6 +144,7 @@
   color: #9ca3af;
   margin-bottom: 1.5rem;
   transition: color 0.3s ease;
+  margin-top: 8px;
 }
 
 .servic-card:hover .service-description {
@@ -360,5 +245,6 @@
   height: 60%;
   object-fit: contain;
 }
+
 
 
