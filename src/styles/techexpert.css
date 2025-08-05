@@ -54,7 +54,7 @@
 .tech-left {
   text-align: left;
   max-width: 500px; 
-  margin-left: 40px;
+/*   margin-left: 40px; */
 }
 
 .tech-subtitle {
@@ -106,4 +106,5 @@
 .tech-button:hover {
   background-color: #e55a00;
 }
+
 
