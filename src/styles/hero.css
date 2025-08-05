@@ -218,8 +218,6 @@
   flex-direction: column;
   gap: 10px;
   z-index: 1000;
-  width: 20px;
-  height: 20px;
 }
 
 .hero-icons a {
@@ -569,6 +567,7 @@
     transform: translateY(5px);
   }
 } */
+
 
 
 
