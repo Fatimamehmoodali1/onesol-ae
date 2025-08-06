@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <section className="hero" data-aos="fade-down">
-      {/* Decorative left triangle & circle */}
+       {/* Decorative left triangle & circle */}
       <div className="hero-left-shapes">
         <Image src="/images/polygon-4.png" alt="Small Triangle" width={20} height={20} className="left-triangle" />
         <Image src="/images/Ellipse-9.png" alt="Small Circle" width={12} height={12} className="left-circle" />
@@ -51,14 +51,12 @@ const Hero = () => {
 
       {/* Social Icons */}
       <div className="hero-icons">
-       <a href="#"><Image src="/images/instagram.png" alt="Instagram" width={24} height={2} /></a>
-       <a href="#"><Image src="/images/facebook.png" alt="Facebook" width={24} height={24} /></a>
-       <a href="#"><Image src="/images/linkedin.png" alt="LinkedIn" width={24} height={24} /></a>
-       <a href="#"><Image src="/images/twitter.png" alt="Twitter" width={24} height={24} /></a>
-       {/* <a href="#"><Image src="/images/x.png" alt="X" width={24} height={24} /></a> */}
-     </div>
-
-
+        <a href="#"><Image src="/images/instagram.png" alt="Instagram" width={24} height={24} /></a>
+        <a href="#"><Image src="/images/facebook.png" alt="Facebook" width={24} height={24} /></a>
+        <a href="#"><Image src="/images/linkedin.png" alt="LinkedIn" width={24} height={24} /></a>
+        <a href="#"><Image src="/images/twitter.png" alt="Twitter" width={24} height={24} /></a>
+       </div>
+      
       {/* Bottom right shapes */}
       <div className="hero-bottom-right-shapes">
         <Image src="/images/Ellipse-4.png" alt="Bottom Circle" width={30} height={30} className="bottom-circle" />
