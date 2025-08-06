@@ -13,14 +13,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const icons = [
-  faVimeo,
+  faHtml5,
+  faApple,
   faAmazon,
   faAndroid,
-  faApple,
-  faBitcoin,
-  faDropbox,
   faGithub,
-  faHtml5,
+  faDropbox,
+  faBitcoin,
+  faVimeo,
 ];
 
 const WhatWeCraft = () => {
@@ -30,14 +30,18 @@ const WhatWeCraft = () => {
         <div className="marquee-group">
           {icons.map((icon, idx) => (
             <div className="icon-card" key={idx}>
-              <FontAwesomeIcon icon={icon} className="icon-inner" />
+              <div className="icon-image">
+                <FontAwesomeIcon icon={icon} className="icon-inner" />
+              </div>
             </div>
           ))}
         </div>
         <div className="marquee-group duplicate" aria-hidden="true">
           {icons.map((icon, idx) => (
             <div className="icon-card" key={`dup-${idx}`}>
-              <FontAwesomeIcon icon={icon} className="icon-inner" />
+              <div className="icon-image">
+                <FontAwesomeIcon icon={icon} className="icon-inner" />
+              </div>
             </div>
           ))}
         </div>
