@@ -1,86 +1,28 @@
-/* .whatwecraft-icons {
-  background-image: url(/images/line-vector.svg);
-  background-size: contain;
-  padding: 2rem 0;
-  overflow: hidden;
-}
-
-.marquee {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.marquee-group {
-  display: flex;
-  animation: scroll 20s linear infinite;
-  gap: 2rem;
-}
-
-.marquee-group.duplicate {
-  position: absolute;
-  left: 120%;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-
-}
-.icon-card {
-  background-color: orange;
-  border-radius: 1rem;
-  padding: 2rem;
-  min-width: 150px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.icon-wrapper {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-inner {
-  font-size: 2.5rem;
-  color: white;
-} */
-
 .whatwecraft-icons {
-  background-image: url(/images/line-vector.svg);
-  background-size: contain;
+  background-image: url("/images/line-vector.svg");
+  background-size: cover;
   padding: 2rem 1rem;
   overflow: hidden;
 }
 
 .marquee {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
 .marquee-group {
   display: flex;
-  animation: scroll 30s linear infinite;
-  gap: 4rem; /* reduced default gap */
+  flex-shrink: 0;
+  gap: 1.5rem;
+  animation: scroll 20s linear infinite;
 }
 
-/* .marquee-group.duplicate {
+.marquee-group.duplicate {
   position: absolute;
-  left: 120%;
-} */
+  left: 100%;
+  top: 0;
+}
 
 @keyframes scroll {
   0% {
@@ -91,16 +33,17 @@
   }
 }
 
-/* 🔶 Card Styling */
+/* 🎨 Card Box */
 .icon-card {
-  background-color: orange;
-  border-radius: 1rem;
-  padding: 1.2rem;
-  min-width: 100px;
-  height: 100px;
+  flex-shrink: 0;
+  background-color: #f68b1f;
+  border-radius: 12px;
+  width: 200px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -108,84 +51,80 @@
   transform: scale(1.05);
 }
 
-/* 🔷 Icon Styling */
-.icon-wrapper {
-  width: 45px;
-  height: 45px;
+/* 🎯 Icon container inside card */
+.icon-image {
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* 🧷 Actual icon size */
 .icon-inner {
-  font-size: 1.8rem;
+  font-size: 30px;
   color: white;
 }
 
-/* ✅ Responsive Adjustments */
-
-/* 📱 Mobile devices */
+/* 📱 Mobile */
 @media (max-width: 640px) {
-  .marquee-group {
-    gap: 1rem;
+  .marquee-group.duplicate{
+    display: none;
   }
 
   .icon-card {
-    min-width: 90px;
+    width: 90px;
     height: 90px;
-    padding: 1rem;
   }
 
-  .icon-wrapper {
+  .icon-image {
     width: 40px;
     height: 40px;
   }
 
   .icon-inner {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
-/* 💻 Larger tablets but not desktop */
+/* 💻 Tablets */
 @media (min-width: 641px) and (max-width: 1023px) {
+  /* .marquee-group.duplicate{
+    display: none;
+  } */
+
   .icon-card {
-    min-width: 110px;
+    width: 120px;
     height: 100px;
-    padding: 1.2rem;
   }
 
-  .icon-wrapper {
+  .icon-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-inner {
+    font-size: 1.6rem;
+  }
+}
+
+/* 🖥️ Desktop */
+@media (min-width: 1024px) {
+  /* .marquee-group.duplicate{
+    display: none;
+  } */
+
+  .icon-card {
+    width: 140px;
+    height: 120px;
+  }
+
+  .icon-image {
     width: 50px;
     height: 50px;
   }
 
   .icon-inner {
-    font-size: 2rem;
-  }
-
-  .marquee-group {
-    gap: 2rem;
-  }
-}
-
-/* 💻 Desktop - keep original styling */
-@media (min-width: 1024px) {
-  .marquee-group {
-    gap: 4rem;
-  }
-
-  .icon-card {
-    min-width: 150px;
-    height: 110px;
-    padding: 2rem;
-  }
-
-  .icon-wrapper {
-    width: 60px;
-    height: 60px;
-  }
-
-  .icon-inner {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 }
