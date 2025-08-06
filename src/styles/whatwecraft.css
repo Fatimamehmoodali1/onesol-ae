@@ -42,10 +42,6 @@
     justify-content: center;
   }
 
-  .servic-card{
-    width:300px;
-  }
-
 }
 
 @media (min-width: 1024px) {
@@ -201,3 +197,4 @@
 .servic-icon.pink {
   background: linear-gradient(to right, #ec4899, #ef4444);
 }
+
