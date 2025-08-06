@@ -23,15 +23,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 46px;
+  padding: 10px 46px;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   width: 300%;
-  max-width: 900px;
+  max-width: 1000px;
   height: 50px;
-  left: 7%;
+  margin-left: 140px;
+  /* margin-right: 20px; */
   position: relative;
 }
 
@@ -51,15 +52,19 @@
 }
 
 .expert-button {
-  background-color: transparent;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  
   border-radius: 40px;
+  /* background-color: #ff7221ff; */
   padding: 6px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  margin-left: auto;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  margin-left: 320px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
 }
 
 /* === Hamburger icon hidden by default === */
@@ -104,12 +109,13 @@
     backdrop-filter: none;
     width: 100%;
     height: auto;
-    padding: 0 20px;
+    padding: 10 20px;
     display:flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-
+    flex-grow: 1;
+    gap: 30px;
   }
 
   .nav-links {
@@ -144,96 +150,77 @@
     font-size: 16px;
     background-color: #ff6a13;
     border: none;
-    border-radius: 30px;
+    border-radius: none;
     color: white;
     text-align: center;
+    margin-left: auto;
+    font-weight: bold;
   }
-
-
-  /* yeh pehle waka code ha  */
-  /* .hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 1001;
-    margin-top: 10px;
-    margin-left: 80%;
-  } */
-
-  /* yeh bi pehle wala code ha
-  .bar {
-    width: 28px;
-    height: 4px;
-    background-color: white;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    margin-left: 8%;
-  } */
-
-  
-  /* purana wala code  */
-  /* .hamburger.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  } */
 
   .hamburger {
-    cursor: pointer;
-    width: 30px;
-    height: 22px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 9999;
-    margin-left: auto;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1002;
+    position: relative;
+    left: 70%;
   }
 
   .bar {
     height: 3px;
     width: 100%;
     background-color: white;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    transition: all 0.4s ease;
     transform-origin: center;
+    position: absolute;
+    left: 0;
   }
 
-  /* OPEN STATE */
-  .hamburger.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    background-color: white;
+  .bar:nth-child(1) {
+    top: 0;
+  }
+  .bar:nth-child(2) {
+    top: 10px;
+  }
+  .bar:nth-child(3) {
+    top: 20px;
+  } 
+
+  /* 🔁 Open State - turns into visible cross */
+  /* .hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
   }
 
   .hamburger.open .bar:nth-child(2) {
-    opacity: 0;
-    transform: scaleX(0);
+  opacity: 0;
   }
 
   .hamburger.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    background-color: white;
-  }
-}
+  transform: rotate(-45deg);
+  top: 10px;
+  }  */
 
-/* === Animate nav-links sidebar === */
 
-.nav-links.show {
+  /* === Animate nav-links sidebar === */
+
+  .nav-links.show {
   transform: translateX(0%);
   opacity: 1;
+  }
+
+  /* Optional: Animate each nav item */
+  .nav-links.show a,
+  .nav-links.show .expert-button {
+  animation: fadeInUp 0.8s ease both;
+  }
+
 }
 
-/* Optional: Animate each nav item */
-.nav-links.show a,
-.nav-links.show .expert-button {
-  animation: fadeInUp 0.8s ease both;
-}
 
 @keyframes fadeInUp {
   0% {
